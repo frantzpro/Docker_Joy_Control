@@ -40,6 +40,7 @@ ENTRYPOINT ["/ros_entrypoint.sh"]
 #RUN apt-get update && apt-get install -y  screen
 
 #Start Copter
-CMD source /ros_ws/devel/setup.bash && roslaunch rospkg joy_button_reader.py
+#CMD source /ros_ws/devel/setup.bash && roslaunch rospkg joy_button_reader.py
+CMD source /ros_ws/devel/setup.bash && roscore && rosrun joy joy_node
 #${semantix_port}
 #CMD bash
